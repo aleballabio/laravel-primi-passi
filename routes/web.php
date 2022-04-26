@@ -21,4 +21,4 @@ Route::get('/', function () {
         ],
     ];
     return view('home', $parama);
-});
+})->name('home');
