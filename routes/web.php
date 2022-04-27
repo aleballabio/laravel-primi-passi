@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,10 +16,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $parama = [
-        'user' => [
-            'nome' => 'Hello',
-            'cognome' => 'World',
+        'nome' =>  [
+            'prodotti' => 'Hello',
+            'caselle' => 'World',
+            'prodotto' => 'World',
+            'caselle' => 'Salone',
         ],
     ];
     return view('home', $parama);
 })->name('home');
+
+Route::get('prodotti', function () {
+    return view('prodotti');
+})->name('prodotti');
